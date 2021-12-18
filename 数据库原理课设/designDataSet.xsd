@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema id="designDataSet" targetNamespace="http://tempuri.org/designDataSet.xsd"
+           xmlns:mstns="http://tempuri.org/designDataSet.xsd" xmlns="http://tempuri.org/designDataSet.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+           xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified"
+           elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+			<DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter"
+			            Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema"
+			            xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+				<Connections>
+					<Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="designConnectionString"
+					            ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly"
+					            Name="designConnectionString (Settings)" ParameterPrefix="@"
+					            PropertyReference="ApplicationSettings.数据库原理课设.Properties.Settings.GlobalReference.Default.designConnectionString"
+					            Provider="System.Data.SqlClient" />
+				</Connections>
+				<Tables>
+					<TableAdapter BaseClass="System.ComponentModel.Component"
+					              DataAccessorModifier="AutoLayout, AnsiClass, Class, Public"
+					              DataAccessorName="courseinfoTableAdapter" GeneratorDataComponentClassName="courseinfoTableAdapter"
+					              Name="courseinfo" UserDataComponentName="courseinfoTableAdapter">
+						<MainSource>
+							<DbSource ConnectionRef="designConnectionString (Settings)" DbObjectName="design.dbo.courseinfo"
+							          DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both"
+							          GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill"
+							          GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset"
+							          ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+							          UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+								<SelectCommand>
+									<DbCommand CommandType="Text" ModifiedByUser="false">
+										<CommandText>SELECT 课程名称 FROM dbo.courseinfo</CommandText>
+										<Parameters />
+									</DbCommand>
+								</SelectCommand>
+							</DbSource>
+						</MainSource>
+						<Mappings>
+							<Mapping SourceColumn="课程名称" DataSetColumn="课程名称" />
+						</Mappings>
+						<Sources />
+					</TableAdapter>
+				</Tables>
+				<Sources />
+			</DataSource>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:element name="designDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"
+	            msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="designDataSet"
+	            msprop:Generator_DataSetName="designDataSet">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="courseinfo" msprop:Generator_RowEvHandlerName="courseinfoRowChangeEventHandler"
+				            msprop:Generator_RowDeletedName="courseinfoRowDeleted"
+				            msprop:Generator_RowDeletingName="courseinfoRowDeleting"
+				            msprop:Generator_RowEvArgName="courseinfoRowChangeEvent" msprop:Generator_TablePropName="courseinfo"
+				            msprop:Generator_RowChangedName="courseinfoRowChanged"
+				            msprop:Generator_RowChangingName="courseinfoRowChanging"
+				            msprop:Generator_TableClassName="courseinfoDataTable" msprop:Generator_RowClassName="courseinfoRow"
+				            msprop:Generator_TableVarName="tablecourseinfo" msprop:Generator_UserTableName="courseinfo">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="课程名称" msprop:Generator_ColumnPropNameInRow="课程名称"
+							            msprop:Generator_ColumnPropNameInTable="课程名称Column"
+							            msprop:Generator_ColumnVarNameInTable="column课程名称" msprop:Generator_UserColumnName="课程名称">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="50" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
